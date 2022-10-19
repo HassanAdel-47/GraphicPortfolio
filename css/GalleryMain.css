@@ -12,8 +12,6 @@ a {
   src: url(../fonts/Mars.ttf);
 }
 body {
-  /* background: #000; */
-  /* background-image: url("../img/cover.jpg"); */
   background-image: linear-gradient(to top, #2b5e99, #000000);
   background: linear-gradient(
     135deg,
@@ -118,6 +116,26 @@ h1 {
   text-transform: uppercase;
   font-family: Mars;
 }
+/*start YouTube*/
+.YT {
+  margin-top: 50px;
+  color: white;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+.YT a {
+  color: #f00;
+  margin-left: 8px;
+  margin-right: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+/*end YouTube*/
 /* start footer */
 footer {
   border-top: 1px solid #090909;

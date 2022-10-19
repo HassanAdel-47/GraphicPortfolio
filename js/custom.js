@@ -22,5 +22,4 @@ function websiteVisits(response) {
 
 $(window).on("load", function () {
   $(".loader-wrapper").fadeOut("slow");
-  console.log("Ok");
 });
