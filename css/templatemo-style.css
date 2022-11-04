@@ -312,8 +312,8 @@ h5 {
   align-items: center;
 }
 .aboutPhoto img {
-  width: 300px;
-  border-radius: 20px;
+  width: 450px;
+  /* border-radius: 20px; */
 }
 .aboutMe p {
   width: 450px;
