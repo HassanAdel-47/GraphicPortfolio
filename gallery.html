@@ -6,22 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <title>Hassan Adel Gallery</title>
-     <!-- animate -->
-     <link rel="stylesheet" href="css/animate.min.css" />
-     <!-- bootstrap -->
-     <link rel="stylesheet" href="css/bootstrap.min.css" />
-     <!-- font-awesome -->
-     <link rel="stylesheet" href="css/font-awesome.min.css" />
-     <!-- google font -->
-     <link
-       href="http://fonts.googleapis.com/css?family=Raleway:400,300,700,800"
-       rel="stylesheet"
-       type="text/css"
-     />
-     <!-- fullpage -->
-     <link rel="stylesheet" href="css/jquery.fullPage.css" />
-     <!-- custom -->
-     <link rel="stylesheet" href="css/templatemo-style.css" />
+    <!-- animate -->
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <!-- google font -->
+    <link
+      href="http://fonts.googleapis.com/css?family=Raleway:400,300,700,800"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- fullpage -->
+    <link rel="stylesheet" href="css/jquery.fullPage.css" />
+
     <link rel="icon" type="image/x-icon" href="img/Designs/logo.png" />
     <link
       rel="stylesheet"
@@ -32,17 +31,50 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/GalleryMain.css" />
-    
   </head>
 
-
   <body>
+    <script>
+      document.createElement;
+    </script>
     <h1>
       Hassan Adel <br />
       <span style="color: #104a8e">Gallery</span>
     </h1>
-    <div class="gallery ">
-      <a class="fadeInLeft wow" data-wow-delay="1s" href="img/Designs/3.jpg">
+    <div class="gallery">
+      <script>
+        //Create Array
+        var myImageArr = [];
+        //Create loop
+        for (i = 1; i < 53; i++) {
+          // Create Images Path
+          var a = "img/Designs/" + "img (" + i + ")" + ".jpg";
+          //Add Images to Array
+          myImageArr.push({ a });
+          //Create Images
+          var myImage = document.createElement("img");
+          //Create Links
+          var link = document.createElement("a");
+          //Create Name of Links' class
+          var linkClass = "link" + i;
+          //Add Class Name to link and jquery classes
+          link.className = linkClass + " " + "fadeInLeft wow";
+          //Add Class Name to images
+          myImage.className = "image";
+          //Add lazy loading to Photos
+          myImage.loading = "lazy";
+          //Add href to links
+          link.href = a;
+          //Add src to images
+          myImage.src = a;
+          //Append link to gallery div
+          document.querySelector(".gallery").appendChild(link);
+          //Append images to links
+          document.querySelector("." + `${linkClass}`).appendChild(myImage);
+        }
+      </script>
+
+      <!-- <a class="fadeInLeft wow" data-wow-delay="1s" href="img/Designs/3.jpg">
         <img loading="lazy" src="img/Designs/3.jpg" alt="photo" /> </a
       ><a class="fadeInLeft wow" data-wow-delay="1s" href="img/Designs/2.jpg">
         <img loading="lazy" src="img/Designs/2.jpg" alt="photo" /> </a
@@ -169,17 +201,29 @@
       </a>
       <a class="fadeInLeft wow" data-wow-delay="1s" href="img/Designs/39.jpg">
         <img loading="lazy" src="img/Designs/39.jpg" alt="photo" />
-      </a>
+      </a> -->
     </div>
-    
-    
-    <p class="YT" >Visit My <a href="https://www.youtube.com/channel/UCSJ9uRYmwYC3VYOhOfQ9trw" target="_blank"> YouTube </a> Channel</p>
+
+    <p class="YT">
+      Visit My
+      <a
+        href="https://www.youtube.com/channel/UCSJ9uRYmwYC3VYOhOfQ9trw"
+        target="_blank"
+      >
+        YouTube
+      </a>
+      Channel
+    </p>
     <div class="head">
       <div class="logo">
         <img loading="lazy" src="img/Designs/logo.png" alt="logo" />
       </div>
       <div class="btn">
-        <button><a class="fadeInLeft wow" data-wow-delay="1s" href="index.html">Go Portfolio</a></button>
+        <button>
+          <a class="fadeInLeft wow" data-wow-delay="1s" href="index.html"
+            >Go Portfolio</a
+          >
+        </button>
       </div>
       <ul class="social-icon">
         <li>
@@ -212,7 +256,11 @@
           <div class="col-md-12 wow fadeIn" data-wow-delay="0.3s">
             <p>
               Copyright &copy; Hassan Adel Portfolio . Designed by
-              <a class="fadeInLeft wow" data-wow-delay="1s" href="https://www.facebook.com/HassanAdel47/" target="_blank"
+              <a
+                class="fadeInLeft wow"
+                data-wow-delay="1s"
+                href="https://www.facebook.com/HassanAdel47/"
+                target="_blank"
                 >Hassan Adel</a
               >
             </p>
@@ -248,7 +296,7 @@
     <script>
       lightGallery(document.querySelector(".gallery"));
     </script>
-       <!-- jQuery -->
+    <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <!-- bootstrap -->
     <script src="js/bootstrap.min.js"></script>
