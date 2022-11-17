@@ -43,35 +43,48 @@
     </h1>
     <div class="gallery">
       <script>
-        //Create Array
-        var myImageArr = [];
-        //Create loop
-        for (i = 1; i < 55; i++) {
-          // Create Images Path
-          var a = "img/Designs/" + "img (" + i + ")" + ".jpg";
-          //Add Images to Array
-          myImageArr.push({ a });
-          //Create Images
-          var myImage = document.createElement("img");
-          //Create Links
-          var link = document.createElement("a");
-          //Create Name of Links' class
-          var linkClass = "link" + i;
-          //Add Class Name to link and jquery classes
-          link.className = linkClass + " " + "fadeInLeft wow";
-          //Add Class Name to images
-          myImage.className = "image";
-          //Add lazy loading to Photos
-          myImage.loading = "lazy";
-          //Add href to links
-          link.href = a;
-          //Add src to images
-          myImage.src = a;
-          //Append link to gallery div
-          document.querySelector(".gallery").appendChild(link);
-          //Append images to links
-          document.querySelector("." + `${linkClass}`).appendChild(myImage);
+        function show(end, path, unique) {
+          //Create Array
+          var myImageArr = [];
+          //Create loop
+          for (i = 1; i <= end; i++) {
+            // Create Images Path
+            var a = [];
+            a.push(path + "img (" + i + ")" + ".jpg");
+            //Add Images to Array
+            myImageArr.push({ a });
+            //Create Images
+            var myImage = document.createElement("img");
+            //Create Links
+            var link = document.createElement("a");
+            //Create Name of Links class
+            var linkClass = "link" + i + unique;
+            //Add Class Name to link and jquery classes
+            link.className = linkClass + " " + "fadeInLeft wow";
+            //Add Class Name to images
+            myImage.className = "image";
+            //Add lazy loading to Photos
+            myImage.loading = "lazy";
+            //Add href to links
+            link.href = a;
+            //Add src to images
+            myImage.src = a;
+            //Append link to gallery div
+            document.querySelector(".gallery").appendChild(link);
+            //Append images to links
+            document.querySelector("." + `${linkClass}`).appendChild(myImage);
+          }
         }
+        show(3, "img/Designs/Begin/", 10);
+        show(4, "img/Designs/Logo/", 0);
+        show(6, "img/Designs/Hasan/", 1);
+        show(7, "img/Designs/Haram/", 2);
+        show(3, "img/Designs/Anatolia/", 8);
+        show(11, "img/Designs/Mersal/", 3);
+        show(4, "img/Designs/Academian/", 4);
+        show(5, "img/Designs/Collection/", 5);
+        show(3, "img/Designs/Manipulation/", 6);
+        show(9, "img/Designs/Portfolio/", 7);
       </script>
     </div>
 
