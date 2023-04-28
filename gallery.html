@@ -1,62 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <title>Hassan Adel Gallery</title>
-    <!-- animate -->
-    <link rel="stylesheet" href="css/animate.min.css" />
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <!-- font-awesome -->
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <!-- google font -->
-    <link
-      href="http://fonts.googleapis.com/css?family=Raleway:400,300,700,800"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <!-- fullpage -->
-    <link rel="stylesheet" href="css/jquery.fullPage.css" />
 
-    <link rel="icon" type="image/x-icon" href="img/Designs/logo.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;1,200&family=Oxanium:wght@800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/GalleryMain.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <title>Hassan Adel Gallery</title>
+  <!-- animate -->
+  <link rel="stylesheet" href="css/animate.min.css" />
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <!-- google font -->
+  <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700,800" rel="stylesheet" type="text/css" />
+  <!-- fullpage -->
+  <link rel="stylesheet" href="css/jquery.fullPage.css" />
 
-  <body>
+  <link rel="icon" type="image/x-icon" href="img/Designs/logo.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;1,200&family=Oxanium:wght@800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/GalleryMain.css" />
+</head>
+
+<body>
+  <script>
+    document.createElement;
+  </script>
+  <h1>
+    Hassan Adel <br />
+    <span style="color: #104a8e">Gallery</span>
+  </h1>
+  <div class="gallery">
     <script>
-      document.createElement;
-    </script>
-    <h1>
-      Hassan Adel <br />
-      <span style="color: #104a8e">Gallery</span>
-    </h1>
-    <div class="gallery">
-      <script>
+      function show(start, end, path, unique) {
         //Create Array
         var myImageArr = [];
         //Create loop
-        for (i = 1; i < 55; i++) {
+        for (i = start; i < end; i++) {
           // Create Images Path
-          var a = "img/Designs/" + "img (" + i + ")" + ".jpg";
+          var a = [];
+          a.push(path + "img (" + i + ")" + ".jpg");
           //Add Images to Array
           myImageArr.push({ a });
           //Create Images
           var myImage = document.createElement("img");
           //Create Links
           var link = document.createElement("a");
-          //Create Name of Links' class
-          var linkClass = "link" + i;
+          //Create Name of Links class
+          var linkClass = "link" + i + unique;
           //Add Class Name to link and jquery classes
           link.className = linkClass + " " + "fadeInLeft wow";
           //Add Class Name to images
@@ -72,116 +67,93 @@
           //Append images to links
           document.querySelector("." + `${linkClass}`).appendChild(myImage);
         }
-      </script>
-    </div>
+      }
+      show(1, 6, "img/Designs/Logo/", 0);
+      show(1, 11, "img/Designs/Hasan/", 1);
+      show(1, 8, "img/Designs/Haram/", 2);
+      show(1, 4, "img/Designs/Anatolia/", 8);
+      show(1, 12, "img/Designs/Mersal/", 3);
+      show(1, 5, "img/Designs/Academian/", 4);
+      show(1, 7, "img/Designs/Collection/", 5);
+      show(1, 4, "img/Designs/Manipulation/", 6);
+      show(1, 10, "img/Designs/Portfolio/", 7);
+    </script>
+  </div>
 
-    <p class="YT">
-      Visit My
-      <a
-        href="https://www.youtube.com/channel/UCSJ9uRYmwYC3VYOhOfQ9trw"
-        target="_blank"
-      >
-        YouTube
-      </a>
-      Channel
-    </p>
-    <div class="head">
-      <div class="logo">
-        <img loading="lazy" src="img/Designs/logo.png" alt="logo" />
-      </div>
-      <div class="btn">
-        <button>
-          <a class="fadeInLeft wow" data-wow-delay="1s" href="index.html"
-            >Go Portfolio</a
-          >
-        </button>
-      </div>
-      <ul class="social-icon">
-        <li>
-          <a
-            href="https://www.facebook.com/HassanAdel47/"
-            class="fa fa-facebook"
-            target="_blank"
-          ></a>
-        </li>
-        <li>
-          <a
-            href="https://wa.me/+963985942976"
-            class="fa fa-whatsapp"
-            target="_blank"
-          ></a>
-        </li>
-        <li>
-          <a
-            href="https://t.me/hassanadel3886"
-            class="fa fa-phone"
-            target="_blank"
-          ></a>
-        </li>
-      </ul>
+  <p class="YT">
+    Visit My
+    <a href="https://www.youtube.com/channel/UCSJ9uRYmwYC3VYOhOfQ9trw" target="_blank">
+      YouTube
+    </a>
+    Channel
+  </p>
+  <div class="head">
+    <div class="logo">
+      <img loading="lazy" src="img/Designs/logo.png" alt="logo" />
     </div>
-    <!-- start footer -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 wow fadeIn" data-wow-delay="0.3s">
-            <p>
-              Copyright &copy; Hassan Adel Portfolio . Designed by
-              <a
-                class="fadeInLeft wow"
-                data-wow-delay="1s"
-                href="https://www.facebook.com/HassanAdel47/"
-                target="_blank"
-                >Hassan Adel</a
-              >
-            </p>
-            <ul class="social-icon">
-              <li>
-                <a
-                  href="https://www.facebook.com/HassanAdel47/"
-                  class="fa fa-facebook"
-                  target="_blank"
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://wa.me/+963985942976"
-                  class="fa fa-whatsapp"
-                  target="_blank"
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://t.me/hassanadel3886"
-                  class="fa fa-phone"
-                  target="_blank"
-                ></a>
-              </li>
-            </ul>
-          </div>
+    <div class="btn">
+      <button>
+        <a class="fadeInLeft wow" data-wow-delay="1s" href="index.html">Go Portfolio</a>
+      </button>
+    </div>
+    <ul class="social-icon">
+      <li>
+        <a href="https://www.facebook.com/HassanAdel47/" class="fa fa-facebook" target="_blank"></a>
+      </li>
+      <li>
+        <a href="https://wa.me/+963985942976" class="fa fa-whatsapp" target="_blank"></a>
+      </li>
+      <li>
+        <a href="https://t.me/hassanadel3886" class="fa fa-phone" target="_blank"></a>
+      </li>
+    </ul>
+  </div>
+  <!-- start footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 wow fadeIn" data-wow-delay="0.3s">
+          <p>
+            Copyright &copy; Hassan Adel Portfolio . Designed by
+            <a class="fadeInLeft wow" data-wow-delay="1s" href="https://www.facebook.com/HassanAdel47/"
+              target="_blank">Hassan Adel</a>
+          </p>
+          <ul class="social-icon">
+            <li>
+              <a href="https://www.facebook.com/HassanAdel47/" class="fa fa-facebook" target="_blank"></a>
+            </li>
+            <li>
+              <a href="https://wa.me/+963985942976" class="fa fa-whatsapp" target="_blank"></a>
+            </li>
+            <li>
+              <a href="https://t.me/hassanadel3886" class="fa fa-phone" target="_blank"></a>
+            </li>
+          </ul>
         </div>
       </div>
-    </footer>
-    <!-- end footer -->
+    </div>
+  </footer>
+  <!-- end footer -->
 
-    <!--Gallery Library-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
-    <script>
-      lightGallery(document.querySelector(".gallery"));
-    </script>
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-    <!-- bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- fullpage -->
-    <script src="js/jquery.fullPage.js"></script>
-    <!-- smoothScroll -->
-    <script src="js/smoothscroll.js"></script>
-    <!-- wow -->
-    <script src="js/wow.min.js"></script>
-    <!-- text rotater -->
-    <script src="js/jquery.simple-text-rotator.js"></script>
-    <!-- custom -->
-    <script src="js/custom.js"></script>
-  </body>
+  <!--Gallery Library-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+  <script>
+    lightGallery(document.querySelector(".gallery"));
+  </script>
+  <!-- jQuery -->
+  <script src="js/jquery.js"></script>
+  <!-- bootstrap -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- fullpage -->
+  <script src="js/jquery.fullPage.js"></script>
+  <!-- smoothScroll -->
+  <script src="js/smoothscroll.js"></script>
+  <!-- wow -->
+  <script src="js/wow.min.js"></script>
+  <!-- text rotater -->
+  <script src="js/jquery.simple-text-rotator.js"></script>
+  <!-- custom -->
+  <script src="js/custom.js"></script>
+</body>
+
 </html>
